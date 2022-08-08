@@ -1,0 +1,6 @@
+tup = [[(1, 'Python', 'Progamação', 1, 'asasdasdasd'), (2, 'Curso de Python', 'Programaçao', 1, 'Curso completo de Python'), (3, 'Curso de Javascript', 'Programaçao', 1, 'Curso completo de Python'), (4, 'Curso de Java', 'Programaçao', 1, 'Curso completo de Java'), (5, 'Curso de Java', 
+'Programaçao', 1, 'Curso completo de Java'), (6, 'Curso de C#', 'Programaçao', 1, 'Curso completo de C#'), (7, 'Curso de C#', 'Programaçao', 1, 'Curso completo de C#'), (8, 'Curso de C#', 'Programaçao', 1, 'Curso completo de C#'), (9, 'Curso de C#', 'Programaçao', 1, 'Curso completo de C#'), (10, 'Curso de C#', 'Programaçao', 1, 'Curso completo de C#'), (11, 'PHP', 'programação', 1, 'asfdsfsdfsdf'), (12, 'Java', 'Programacao', 1, ''), (13, 'Curso de C#', 'Programaçao', 1, 'Curso completo de C#'), (14, 'teste 1', 'Python', 1, 'programaçao python no pycharm'), (15, 'Curso 1', 'Python', 1, 'Programação ssfasfa'), (16, 'Curso 2', 'Pythhon 2', 1, 'programaçao asdasd')]]
+print(tup)
+
+dct = dict(map(reversed, tup))
+print(dct)
