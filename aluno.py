@@ -1,5 +1,5 @@
 import sqlite3
-
+#teste
 class Aluno:
     def __init__(self, nome, cpf, email, telefone=None):
 
