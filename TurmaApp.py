@@ -304,14 +304,18 @@ class TurmaApp:
 
     def salvar(self):
 
-        # pegando a data "convertando a data para data de banco de dados"
+        # pegando a data "formatando a data para data de banco de dados"
         data_de = self.entry_data_de.get()
 
-        data_de = f"{data_de[6:10]}-{data_de[3:5]}-{data_de[:2]}"
+        data_de_format = datetime.datetime.strptime(data_de, "%d/%m/%Y").date()
+
+        print(data_de_format)
 
         data_ate = self.entry_data_ate.get()
 
-        data_ate = f"{data_ate[6:10]}-{data_ate[3:5]}-{data_ate[:2]}"
+        data_ate_format = datetime.datetime.strptime(data_ate, "%d/%m/%Y").date()
+
+        print(data_ate_format)
 
         # VERIFICANDO SE TUDO FOI SELECIONADO
         try:
@@ -341,8 +345,8 @@ class TurmaApp:
             try:
                 turma = Turma(
                     periodo=periodo,
-                    data_inicio=data_de,
-                    data_fim=data_ate,
+                    data_inicio=data_de_format,
+                    data_fim=data_ate_format,
                     codigo_curso=codigo_curso,
                     matricula_professor=matricula_professor,
                 )

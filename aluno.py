@@ -74,6 +74,8 @@ class Aluno:
         # salvando a alteração da tabela(confrima)
         conexao.commit()
 
+        conexao.close()
+
     @classmethod
     def listar(cls):
 
