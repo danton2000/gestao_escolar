@@ -36,6 +36,23 @@ class TurmaApp:
 
         self.frame_master.pack()
 
+        self.frame_ferramentas = Frame(self.frame_master)
+
+        self.frame_ferramentas.pack()
+
+        self.button = Button(
+            self.frame_ferramentas, text='Salvar Turma', command=self.salvar)
+
+        self.button.pack()
+
+        # Mensagem
+        self.label_mensagem = Label(
+            self.frame_ferramentas,
+            font=TurmaApp.font
+        )
+
+        self.label_mensagem.pack()
+
         self.frame_titulo = Frame(self.frame_master)
 
         self.frame_titulo.pack()
@@ -255,22 +272,7 @@ class TurmaApp:
             column=1
         )
 
-        self.frame_ferramentas = Frame(self.frame_master)
-
-        self.frame_ferramentas.pack()
-
-        self.button = Button(
-            self.frame_ferramentas, text='Salvar Turma', command=self.salvar)
-
-        self.button.pack()
-
-        # Mensagem
-        self.label_mensagem = Label(
-            self.frame_ferramentas,
-            font=TurmaApp.font
-        )
-
-        self.label_mensagem.pack()
+        
 
     def listar_curso(self):
         # PEGANDO A LISTA DOS CURSOS LA NA CLASSA CURSO, USANDO O METODO LISTAR
